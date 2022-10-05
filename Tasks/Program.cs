@@ -51,12 +51,12 @@ int[] GetNumbers(int[] array)
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write("Введите число: ");
-                array[i] = int.Parse(Console.ReadLine());
+                array[i] = Convert.ToInt32(Console.ReadLine());
             }
             return array;
         }
 Console.Write("Введите номер задачи: ");
-int task = int.Parse(Console.ReadLine());
+int task = Convert.ToInt32(Console.ReadLine());
 switch (task)
 {
     case 41:
@@ -125,13 +125,13 @@ b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 */
     Console.Clear();
     Console.Write("Введите переменную b1: ");
-    double b1 = double.Parse(Console.ReadLine());
+    double b1 = Convert.ToDouble(Console.ReadLine());
     Console.Write("Введите переменную k1: ");
-    double k1 = double.Parse(Console.ReadLine());
+    double k1 = Convert.ToDouble(Console.ReadLine());
     Console.Write("Введите переменную b2: ");
-    double b2 = double.Parse(Console.ReadLine());
+    double b2 = Convert.ToDouble(Console.ReadLine());
     Console.Write("Введите переменную k2: ");
-    double k2 = double.Parse(Console.ReadLine());
+    double k2 = Convert.ToDouble(Console.ReadLine());
     if (k2 == k1)
     {
         Console.WriteLine("Точки пересечения нет, отрезки параллельны");
@@ -215,7 +215,7 @@ void Task47()
     Console.Clear();
     int size = GetSizeArray();
     Console.Write("Хотите массив задаять рандомно(1) или в ручную(2)");
-    int example = int.Parse(Console.ReadLine());
+    int example = Convert.ToInt32(Console.ReadLine());
     switch (example)
     {
         case 1:
