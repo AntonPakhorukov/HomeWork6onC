@@ -55,6 +55,14 @@ int[] GetNumbers(int[] array)
             }
             return array;
         }
+int[] GetResult(int[] array)
+        {
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                if (array[i] == array[i + 1]) array[i + 1] = array[i + 1] + 1;
+            }
+            return array;
+        }
 Console.Write("Введите номер задачи: ");
 int task = Convert.ToInt32(Console.ReadLine());
 switch (task)
@@ -229,14 +237,6 @@ void Task47()
     {
         int[] array = GetRandomArray(size, 0, 10);
         Console.WriteLine("[" + String.Join(", ", array) + "]");
-        int[] GetResult(int[] array)
-        {
-            for (int i = 0; i < array.Length - 1; i++)
-            {
-                if (array[i] == array[i + 1]) array[i + 1] = array[i + 1] + 1;
-            }
-            return array;
-        }
         array = GetResult(array);
         Console.WriteLine("[" + String.Join(", ", array) + "]");
     }
@@ -244,14 +244,6 @@ void Task47()
         int[] array = new int[size];
         array = GetNumbers(array); 
         Console.WriteLine("[" + String.Join(", ", array) + "]");
-        int[] GetResult(int[] array)
-        {
-            for (int i = 0; i < array.Length - 1; i++)
-            {
-                if (array[i] == array[i + 1]) array[i + 1] = array[i + 1] + 1;
-            }
-            return array;
-        }
         array = GetResult(array);
         Console.WriteLine("[" + String.Join(", ", array) + "]");
     }
